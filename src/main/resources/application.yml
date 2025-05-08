@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: service-a
+  config:
+    import: configserver:http://localhost:8888
+  cloud:
+    config:
+      profile: stage
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+server.port: 8081
